@@ -86,3 +86,7 @@ LABEL org.duckietown.label.module.type="${REPO_NAME}" \
     org.duckietown.label.maintainer="${MAINTAINER}"
 # <== Do not change the code above this line
 # <==================================================
+RUN wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
+RUN chmod +x install_geographiclib_datasets.sh
+RUN sudo ./install_geographiclib_datasets.sh
+
