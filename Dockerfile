@@ -7,7 +7,7 @@ ARG ICON="fighter-jet"
 
 # ==================================================>
 # ==> Do not change the code below this line
-ARG ARCH=arm32v7
+ARG ARCH=arm64v8
 ARG DISTRO=daffy
 ARG BASE_TAG=${DISTRO}-${ARCH}
 ARG BASE_IMAGE=dt-ros-commons
@@ -89,4 +89,5 @@ LABEL org.duckietown.label.module.type="${REPO_NAME}" \
 RUN wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
 RUN chmod +x install_geographiclib_datasets.sh
 RUN sudo ./install_geographiclib_datasets.sh
+RUN rm install_geographiclib_datasets.sh
 
