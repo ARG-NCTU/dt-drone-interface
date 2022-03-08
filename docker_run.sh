@@ -1,7 +1,8 @@
 docker run -it \
+    --restart=unless-stopped \
     --detach \
     --name drone-interface \
-    --rm -e "VEHICLE_NAME=drone" \
+    -e "VEHICLE_NAME=drone" \
     -e "ROBOT_TYPE=duckiedrone" \
     -e "VEHICLE_IP=192.168.50.161" \
     -e "ROS_MASTER_URI=http://192.168.50.161:11311" \
